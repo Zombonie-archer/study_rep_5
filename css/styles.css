@@ -394,6 +394,7 @@ img {
 .container-footer {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .container-footer-text {
@@ -402,13 +403,11 @@ img {
 }
 
 .container-footer-social-div {
-    margin-left: 120px;
     display: inline-block;
     max-width: 208px;
 }
 
 .container-form {
-    margin-left: 120px;
 }
 
 .footer-social-p, .footer-form-p {
@@ -531,6 +530,14 @@ img {
     align-items: center;
     z-index: 9999;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal-container {
@@ -543,6 +550,10 @@ img {
 }
 
 .close-modal {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     border-radius: 100%;
     width: 24px;
@@ -564,7 +575,6 @@ img {
 .close-modal-icon {
     width: 8px;
     height: 8px;
-    position: absolute;
 }
 
 .modal-title {
